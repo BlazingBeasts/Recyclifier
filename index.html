@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recyclifier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="welcome-screen" class="screen">
+    <img src="Recyclifier_Logo-removebg-preview 1.png" alt="Recyclifier Logo" id="logo">
+    <button id="nav-button-welcome" class="nav-button">Go to Main</button>
+    <h1>Welcome to Recyclifier</h1>
+    <button id="start-button">Start Recycling</button>
+    <button id="view-tracker-button">View Recycling Tracker</button>
+</div>
+
+<div id="main-content" class="screen">
+    <button id="nav-button-main" class="nav-button">Go to Results</button>
+    <h1>Recyclifier</h1>
+    <div class="camera-container">
+        <video id="camera" width="640" height="480" autoplay></video>
+        <canvas id="canvas" width="640" height="480" class="hidden"></canvas>
+    </div>
+    <button id="capture">Capture</button>
+    <button id="classify" class="hidden">Classify</button>
+    <button id="retake" class="hidden">Retake</button>
+</div>
+
+<div id="result-screen" class="screen">
+    <h1>Results</h1>
+    <button id="nav-button-result" class="nav-button">Go to Welcome</button>
+    <p id="result">Classification result will appear here.</p>
+    <p id="additional-info"></p> <!-- Element for additional info -->
+    <button id="recycle-another">Recycle another item</button>
+    <div id="plastic-number-section" class="plastic-number-section">
+        <div id="plastic-number-input-container">
+            <input type="number" id="plastic-number-input" min="1" max="7" placeholder="Enter plastic number">
+            <button id="plastic-number-submit">Submit</button>
+        </div>
+    </div>
+</div>
+<div id="tracker-screen" class="screen">
+    <button id="nav-button-tracker" class="nav-button">Go Back</button>
+    <h1>Recycling Tracker</h1>
+    <div id="tracker-stats">
+        <!-- Stats will be populated by JavaScript -->
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

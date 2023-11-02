@@ -1,0 +1,225 @@
+body, html {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Disable scrolling */
+}
+
+.nav-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #45a049;
+}
+
+.screen {
+    display: flex; /* Default to flex, but will be initially hidden due to opacity */
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 0.5s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    pointer-events: none; /* Disable interactions when screen is not active */
+}
+
+.screen.show {
+    opacity: 1;
+    pointer-events: auto; /* Enable interactions when screen is active */
+}
+
+#welcome-screen {
+    background-color: green;
+    color: white;
+}
+
+#main-content, #result-screen {
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.camera-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    width: 640px;
+    margin-bottom: 20px; /* Space between canvas and buttons */
+}
+
+#camera, #canvas{
+    border: 5px solid #333; /* Adding border back */
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+#result, #additional-info {
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.hidden {
+    display: none;
+}
+.city-link-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.city-link-button:hover {
+    background-color: #45a049;
+}
+
+.plastic-number-section {
+    position: absolute;
+    bottom: 30px; /* Adjust this value to move closer or further from the bottom */
+    width: 100%; /* Ensures it spans the width of the screen */
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    text-align: center;
+}
+
+#plastic-number-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children horizontally in the container */
+    margin-top: 20px;
+    text-align: left;
+}
+
+#plastic-number-input-container label {
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%; /* Ensures the label spans the full width */
+}
+
+#plastic-number-input, #plastic-number-submit {
+    padding: 10px;
+    border-radius: 4px;
+    margin: 5px auto;
+    display: block;
+}
+
+#plastic-number-input {
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Space between input and button */
+}
+
+#plastic-number-submit {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#plastic-number-submit:hover {
+    background-color: #45a049;
+}
+
+#retake {
+    background-color: #f44336; /* Red color for retake button */
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#retake:hover {
+    background-color: #d32f2f;
+}
+
+#recycle-another {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px;
+    margin-top: 30px; /* Increased top margin for more space */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#recycle-another:hover {
+    background-color: #45a049;
+}
+
+#tracker-screen {
+    background-color: #e7f4e4; /* Light green background */
+}
+
+#tracker-stats p {
+    font-size: 18px;
+    color: #333;
+    margin: 5px 0;
+}
+
+#result-screen h1 {
+    font-size: 54px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin: 0;
+    position: absolute;
+    top: 10%; /* Position at the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+#logo {
+    width: 250px; /* Ensures the image is responsive and fits the screen */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensures the image doesn't inline with other elements */
+    margin: 0 auto 20px; /* Center the image and add some space below */
+}
